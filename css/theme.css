@@ -908,11 +908,77 @@ p:last-child {
   }
 }
 
+.chatter {
+	max-width: 800px;
+}
+
+#mapContent {
+	width: 100%;
+	max-width: 1400px;
+	height: 80vh;
+	margin: 2.4rem auto 2.4rem;
+	position: relative;
+}
+
 #map {
   width: 100%;
-  max-width: 1400px;
-  height: 700px;
-  margin: 0 auto 2.4rem;
+  height: 80vh;
+}
+
+#legend {
+	font-family: "Open Sans", Arial, sans-serif;
+	float: left;
+	width: 120px;
+	height: 145px;
+	position: absolute;
+	margin: 0 0 0 10px;
+	padding: 10px;
+	right: 10px;
+	top: 10px;
+	background-color: rgba(255,255,255,.8);
+}
+
+#legend h6 {
+	font-weight: normal;
+	text-align: center;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+}
+
+.circle {
+	border-radius: 50%;
+	border: 1px solid #545454;
+	font-family: 'Open Sans', Arial, sans-serif;
+	display: block;
+	text-align: center;
+	font-size: 1.2rem;
+	float: left;
+	margin: 0 1rem 0 0;
+	position: absolute;
+	bottom: 10px;
+}
+
+#oneRecruit {
+	width: 20px;
+	height: 20px;
+	line-height: 14px;
+	margin-top: 30px;
+	left: 50px;
+}
+
+#twoRecruit {
+	width: 40px;
+	height: 40px;
+	line-height: 20px;
+	margin-top: 20px;
+	left: 40px;
+}
+
+#fourRecruit {
+	width: 80px;
+	height: 80px;
+	line-height: 20px;
+	left: 20px;
 }
 
 .leaflet-popup {
@@ -966,3 +1032,13 @@ table td {
 .circleFade {
   opacity: .5;
 }
+
+select {
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+}
+
+#selectSchool, #selectPosition {
+	margin: 0 0 2.4rem 0;
+}
+

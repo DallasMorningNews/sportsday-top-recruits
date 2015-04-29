@@ -52,11 +52,6 @@
 	</script> 
 	<script src="/interactives/template/common/js/jquery-1.10.2.min.js"></script>
 
- 	<!-- Un-note the following line to use NDN video -->
-	<!--
-	<script type="text/javascript" async src="http://launch.newsinc.com/js/embed.js" id="_nw2e-js"></script>
-	-->
-
 	<!--[if lt IE 9]><script type="text/javascript" src="/interactives/template/common/respond.min.js"></script><![endif]-->
 	<script type="text/javascript" src="http://www.googletagservices.com/tag/js/gpt.js"></script>
 	<script type="text/javascript">
@@ -101,13 +96,14 @@
 				<header id="storyHead">
 					<h3>HIGH SCHOOL FOOTBALL</h3>
 					<h1>SportsDay&rsquo;s Top 50 for 2016</h1>
-					<h2>Deck head goes in this spot here</h2>
+					<h2>Mapping where the best high school football recruits go to school in North Texas.</h2>
 				</header>
 				<!-- end storyHead -->
 
 				<section class="bylineBlock">
     	    		<p>By <a target="blank" href="mailto:emailaddresshere">Corbett Smith</a> | Staff Writer</p>
     	    		<p>Published Month Date, Year</p>
+					<p>Updated: <span id="updateDate"></span></p>
        			</section>
         		<!-- end bylineBlock -->
 <!-- 
@@ -117,27 +113,41 @@
 -->
 				<!-- end shareComments -->
 
-				<p>Staff Writer Corbett Smith ranks the top 50 senior football recruits in North Texas. Click the circles to see recruits by high school, or filter the recruits by position using the dropdown below:</p>
-
-				<p>View recruits by position: </p>
-				<select id="mapPosition">
-					<option value='all positions'>All Positions</option>
-					<option value='quarterback'>Quarterback</option>
-					<option value='running back'>Running back</option>
-					<option value='wide receiver'>Wide receiver</option>
-					<option value='tight end'>Tight end</option>
-					<option value='offensive lineman'>Offensive lineman</option>
-					<option value='defensive lineman'>Defensive lineman</option>
-					<option value='linebacker'>Linebacker</option>
-					<option value='defensive back'>Defensive back</option>
-					<option value='athlete'>Athlete</option>
-					<option value='kicker'>Kicker</option>
-				</select>
-
-				<div id="map"></div>
+				<div id="leadIn" class="clearFix">
+					<p class="chatter">Staff Writer Corbett Smith ranks the top 50 senior football recruits for 2016 in North Texas. The larger the circle, the more recruits attend that school. Click the circles to see recruits by high school, or filter the recruits by position using the dropdown below:</p>
+					
+					
+					<p class="filter">View recruits by position: &nbsp; 
+						<select id="mapPosition">
+							<option value='all positions'>All Positions</option>
+							<option value='quarterback'>Quarterback</option>
+							<option value='running back'>Running back</option>
+							<option value='wide receiver'>Wide receiver</option>
+							<option value='tight end'>Tight end</option>
+							<option value='offensive lineman'>Offensive lineman</option>
+							<option value='defensive lineman'>Defensive lineman</option>
+							<option value='linebacker'>Linebacker</option>
+							<option value='defensive back'>Defensive back</option>
+							<option value='athlete'>Athlete</option>
+							<option value='kicker'>Kicker</option>
+						</select>
+					</p>
+					
+				</div>
+			
+				<div id="mapContent">
+					<div id="map"></div>
+					<div id="legend" class="clearFix">
+						<h6>Number of recruits</h6>
+						<span class="circle" id="oneRecruit">1</span>
+						<span class="circle" id="twoRecruit">2</span>
+						<span class="circle" id="fourRecruit">4</span>
+					</div>
+				</div>
+				
 
 				<h4 id="tableHeader">The top 50 recruits</h4>
-				<select id="selectSchool"></select>
+				<select id="selectSchool"></select> &nbsp;
 				<select id="selectPosition">
 					<option value='all positions'>All Positions</option>
 					<option value='quarterback'>Quarterback</option>
